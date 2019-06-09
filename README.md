@@ -35,7 +35,7 @@ COPY . ./
 EXPOSE 3000
 # Run the app when the container launches 
 CMD ["yarn", "start"]
-``
+```
 
 Build the image
 
