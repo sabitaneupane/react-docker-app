@@ -55,7 +55,7 @@ services:
 ```
 
 
-Step 5: to run project build image and run container
+> Step 5: to run project build image and run container
 
 cmd
 ```	
@@ -68,7 +68,7 @@ docker-compose run
 --------------------------------------------------- 
 
 
-Using Makefile file (instead of docker-compoe.yml file)
+### Using Makefile file (instead of docker-compose.yml file)
 
 ```
 build:
