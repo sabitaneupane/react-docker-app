@@ -37,16 +37,26 @@ EXPOSE 3000
 CMD ["yarn", "start"]
 ```
 
-Build the image
+> Step 4: Add Makefile file
 
-cmd
 ```
-docker build -t reactdockerapp .
+build:
+	docker build -t reactdockerapp . 
+
+run:
+	docker build -t reactdockerapp .
+	
+	docker run -it -p 3000:3000 reactdockerapp  
+
+run-local:
+	yarn start
+
 ```
 
-Run the container
+
+Step 5: to run project build image and run container
 
 cmd
 ```	
-docker run -it -p 3000:3000 reactdockerapp  
+make run 
 ```
