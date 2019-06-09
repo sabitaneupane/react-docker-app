@@ -37,7 +37,38 @@ EXPOSE 3000
 CMD ["yarn", "start"]
 ```
 
-> Step 4: Add Makefile file
+> Step 4: Add docker-compose.yml file
+
+```
+version: '3.7'
+services:
+  sample:
+    container_name: reactdockerapp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+
+```
+
+
+Step 5: to run project build image and run container
+
+cmd
+```	
+docker-compose build 
+
+docker-compose run 
+```
+
+
+--------------------------------------------------- 
+
+
+Using Makefile file (instead of docker-compoe.yml file)
 
 ```
 build:
@@ -53,8 +84,7 @@ run-local:
 
 ```
 
-
-Step 5: to run project build image and run container
+to run project build image and run container
 
 cmd
 ```	
