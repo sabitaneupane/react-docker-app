@@ -47,6 +47,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
     ports:
       - '3000:3000'
     environment:
@@ -77,12 +80,15 @@ build:
 run:
 	docker build -t reactdockerapp .
 	
-	docker run -it -p 3000:3000 reactdockerapp  
+	docker run -it -p 3000:3000 -v $(shell pwd):/app -v /app/node_modules reactdockerapp 
 
 run-local:
 	yarn start
 
 ```
+
+> $(shell pwd) is used to get current project path. So,we can simply use the path here like Documents/practise/fed/react-docker-app:/app
+
 
 to run project build image and run container
 
