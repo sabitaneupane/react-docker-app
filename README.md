@@ -47,6 +47,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
     ports:
       - '3000:3000'
     environment:
