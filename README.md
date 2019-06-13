@@ -87,6 +87,8 @@ run-local:
 
 ```
 
+> $(shell pwd) is used to get current project path. So,we can simply use the path here like Documents/practise/fed/react-docker-app:/app
+
 
 to run project build image and run container
 
